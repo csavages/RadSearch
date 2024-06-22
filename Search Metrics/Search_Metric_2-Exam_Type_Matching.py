@@ -93,8 +93,8 @@ for exam_type_semantic_search_rank_result in exam_type_semantic_search_rank_resu
         AP_value = calculate_average_precision(row[selected_columns].tolist(), specified_exam_type_only_impressions_list)
         AP_list.append(AP_value)
 
-# Calculate the mean of the values in AP_list
-mean_AP = np.mean(AP_list)
+# Calculate the mean average precision (mAP)
+mAP = np.mean(AP_list)
 
-# Print or use the mean_AP value as needed
-print(f"Mean Average Precision: {mean_AP}")
+# Print mAP result
+print(f"Mean Average Precision: {mAP}")
