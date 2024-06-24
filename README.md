@@ -1,6 +1,11 @@
 # RadSearch: Semantic search and retrieval for radiology reports (update in progress)
 
-This is a repository for training an embedding model for semantic search and retrieval of radiology reports. Scripts for evaluating search performance using three search metrics are also provided. Training scripts can be found in the `Training` folder. Evaluation scripts are provided in the `Search Metrics` folder. Further information on the original trained model (RadSearch) and its evaluation can be found in the study below.
+This is a repository for training an embedding model for semantic search and retrieval of radiology reports. Scripts for evaluating search performance using three search metrics are also provided. Further information on the original trained model (RadSearch) and its evaluation can be found in the study below.
+
+Training scripts can be found here: [Training](/Training)
+
+Evaluation scripts can be found here: [Search Metrics](/Search_Metrics)
+
 
 
 ## Citation
