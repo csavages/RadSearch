@@ -41,14 +41,14 @@ free_text_query_list = extract_list_from_column_and_remove_line_break(df_query, 
 report_ids = df_imaging_finding.report_id.dropna().tolist()
 
 #%%
-# Load the model
-your_model_save_path = 'your_output_folder_path/RadBERT-RoBERTa-4m/your_model_final'
+# Load your trained model
+your_model_folder_path = 'your_trained_model_parent_folder/your_trained_model'
 
 # Alternatively, you can use a different open-source/open-weights embedding model with the Hugging Face model path
 huggingface_model_path = 'Alibaba-NLP/gte-large-en-v1.5'
 
 # Initialize the model
-embedder = SentenceTransformer(your_model_save_path, trust_remote_code=True) # Or SentenceTransformer(huggingface_model_path, trust_remote_code=True) to use a model on Hugging Face
+embedder = SentenceTransformer(your_model_folder_path, trust_remote_code=True) # Or SentenceTransformer(huggingface_model_path, trust_remote_code=True) to use a model on Hugging Face
 embedder.max_seq_length = 514  # Set maximum token count for embeddings. May need to adjust for longer radiology reports
 embedder = embedder.to(device) # Move the model to the device (GPU or CPU)
 
